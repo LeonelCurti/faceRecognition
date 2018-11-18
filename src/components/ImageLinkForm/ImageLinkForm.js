@@ -1,12 +1,14 @@
 import React from 'react';
 
 
-const ImageLinkForm = ({onInputChange, onButtonSubmit}) => {
+const ImageLinkForm = ({currentUser,onInputChange, onButtonSubmit}) => {
   return (
     <div>
+      <p className='f3'>Face detection, insert image</p>
       <p className='f3'>
-        {'Face detection, insert image'}
+        {`${currentUser.name}, your number of entries is ${currentUser.entries}`}
       </p>
+      
       <div className="center">
         <div className='center pa4 br3'>         
           <input 
