@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class SignIn extends Component {
 
   constructor(props){
-    super(props); //para usar props abajo debo integrarlo
+    super(props); 
     this.state= {  
       signInEmail:'',
       signInPassword:''
@@ -34,6 +34,7 @@ class SignIn extends Component {
         this.props.onRouteChange('home');    
       }  
     })
+    .catch(console.log);
   }
 
   render(){
