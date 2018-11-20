@@ -57,7 +57,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input })
-      fetch('http://localhost:3010/imageclarifai',{
+      fetch('https://ancient-island-39845.herokuapp.com/imageclarifai',{
         method:'post',
         headers: {'Content-type':'application/json'},
         body: JSON.stringify({
@@ -66,7 +66,7 @@ class App extends Component {
       })
       .then(response =>response.json())
       .then( response => {
-        fetch('http://localhost:3010/image',{
+        fetch('https://ancient-island-39845.herokuapp.com/image',{
           method:'post',
           headers: {'Content-type':'application/json'},
           body: JSON.stringify({
