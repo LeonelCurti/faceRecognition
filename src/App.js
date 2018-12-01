@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const initialState = {
   input:'',
   imageUrl:'',
   box:{},
-  route:'signin',
+  route:'signin',//change to signin in production
   isSignedIn: false,
   user:{
     id:'',

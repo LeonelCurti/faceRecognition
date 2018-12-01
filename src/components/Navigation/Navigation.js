@@ -1,52 +1,68 @@
 import React from 'react'
-import imageLogo from '../../components/Logo/React-icon.svg.png';
 
 const Navigation = ({ onRouteChange, isSignedIn }) => {
   if(isSignedIn){
     return (
-      <div 
-        className='ma4 mt2'
-        style={{display:'flex',justifyContent:'space-between'}}>
-        <div>
-          <img 
-            src={imageLogo} 
-            alt="imageLogo" />
-        </div>
-        <nav>
-          <p 
-            className='f3 grow 
-            dim black no-underline pa3 pointer'
-            onClick={()=>onRouteChange('signout')}
-            >Sign Out
-          </p>
-        </nav>      
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+
+      <a className="navbar-brand" href="/index.html">Face Detection</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse">
+        <ul className="navbar-nav  ml-auto">
+          <li className="nav-item ">
+            <a 
+              className="nav-link btn btn-outline-dark"
+              href='/' 
+              onClick={(e)=>{
+                e.preventDefault();
+                onRouteChange('signout')}}>
+              Sign Out
+            </a>
+          </li>                       
+        </ul>        
       </div>
+
+      </nav>
     )
   }else{
     return (
-      <div 
-      className='ma4 mt2'
-      style={{display:'flex',justifyContent:'space-between'}}>
-      <div>
-        <img 
-          src={imageLogo} 
-          alt="imageLogo" />
-      </div>
-      <nav>
-        <p 
-          className='f3 grow 
-          dim black no-underline pa3 pointer'
-          onClick={()=>onRouteChange('signin')}
-          >Sign In
-        </p>
-        <p 
-          className='f3 grow 
-          dim black no-underline pa3 pointer'
-          onClick={()=>onRouteChange('register')}
-          >Register
-        </p>
-      </nav>      
-    </div> 
+
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+
+        <a className="navbar-brand" href="/index.html">Face Detection</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav  ml-auto">
+            <li className="nav-item ">
+              <a 
+                className="nav-link btn btn-outline-dark"
+                href='/' 
+                onClick={(e)=>{
+                  e.preventDefault();
+                  onRouteChange('signin')}}>
+                Sign In
+              </a>
+            </li>
+            <li className="nav-item">
+              <a 
+                className="nav-link"
+                href='/' 
+                onClick={(e)=>{
+                  e.preventDefault();
+                  onRouteChange('register')}}>
+                Register
+              </a>
+            </li>                        
+          </ul>        
+        </div>
+        
+      </nav>
     )
   }    
 }

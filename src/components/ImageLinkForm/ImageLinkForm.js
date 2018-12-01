@@ -3,27 +3,40 @@ import React from 'react';
 
 const ImageLinkForm = ({currentUser,onInputChange, onButtonSubmit}) => {
   return (
-    <div>
-      <p className='f3'>Face detection, insert image</p>
-      <p className='f3'>
-        {`${currentUser.name}, your number of entries is ${currentUser.entries}`}
-      </p>
-      
-      <div className="center">
-        <div className='center pa4 br3'>         
-          <input 
-            className='f2 pa2 w-70 center pv2'
-            type="text"
-            onChange={onInputChange}/>
-          <button
-            className='w-30 grow link ph3  dib white bg-light-red f3 '
-            onClick={onButtonSubmit}>
-            Detect
-          </button>
+    <div className="container mt-3 text-center">
+
+      <div className="row">
+
+        <div className="col-sm-8 col-md-7 col-lg-6 mx-auto">
+
+          <h3>User Information</h3>
+
+          <ul className="list-group mb-2">
+            <li className="list-group-item">Name: {`${currentUser.name}`}</li>
+            <li className="list-group-item">Number of detections: {`${currentUser.entries}`}</li>  
+          </ul>   
+          <div className="input-group mb-3">
+            <input 
+              type="text" 
+              onChange={onInputChange}
+              className="form-control"
+              placeholder="Insert url of the image" 
+              aria-describedby="basic-addon1"/>
+            <div className="input-group-prepend">
+              <button 
+                className="btn btn-success" 
+                type="button"
+                onClick={onButtonSubmit}
+                >Detect</button>
+            </div>
+          </div>
+
         </div>
-        
+
       </div>
+
     </div>
+
   )
 }
 export default ImageLinkForm;
