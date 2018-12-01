@@ -10,7 +10,7 @@ const initialState = {
   input:'',
   imageUrl:'',
   box:{},
-  route:'signin',//change to signin in production
+  route:'signin',
   isSignedIn: false,
   user:{
     id:'',
@@ -110,7 +110,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Navigation 
           onRouteChange={this.onRouteChange}
           isSignedIn={this.state.isSignedIn} />
