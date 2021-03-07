@@ -24,7 +24,7 @@ class Register extends Component {
 
   onSubmitRegister = (e) => {
     e.preventDefault();
-    fetch('https://ancient-island-39845.herokuapp.com/register',{
+    fetch('https://facesearchapi.herokuapp.com/register',{
       method:'post',
       headers: {'Content-type':'application/json'},
       body: JSON.stringify({

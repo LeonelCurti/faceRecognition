@@ -20,7 +20,7 @@ class SignIn extends Component {
 
   onSubmitSignIn = e => {
     e.preventDefault();
-    fetch("https://ancient-island-39845.herokuapp.com/signin", {
+    fetch("https://facesearchapi.herokuapp.com/signin", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
